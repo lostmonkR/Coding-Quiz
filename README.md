@@ -13,6 +13,6 @@ Give me feedback after taking the quiz :)
 # Source 
 
 To clone this repo  
-''' 
+```
 git clone https://github.com/lostmonkR/Coding-Quiz.git
-'''
+```

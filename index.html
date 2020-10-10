@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -8,27 +9,105 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-
-<div class="jumbotron text-center">
-  <h1>Coding Quiz</h1>
-  <p>Challenge your self</p> 
-</div>
-
-   <!-- first question -->
-<div class="container">
-  <div class="row">
-    <h1>1.how are u doing</h1>
-    <div style = "padding:5px"><button id="good" type="button" class="btn btn-primary">good</button></div>
-    <div style = "padding:5px"><button type="button" class="btn btn-primary">good</button></div>
-    <div style = "padding:5px"><button type="button" class="btn btn-primary">good</button></div>
+  <!-- wellcome page -->
+  <div class="jumbotron text-center">
+    <h1>Coding Quiz</h1>
+    <p>Well come to my Coding Quiz, I have 5 question for you to test your skill, prepare for it.</p>
+    <div style="padding:5px"><button id="good" type="button" class="btn btn-primary">continue</button></div>
   </div>
+
+  <!-- first question -->
+  <div id="question-one" class="container">
+    <div class="row">
+      <h1>1.What tag is not required in all HTML documents, and is used to define the title?</h1>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">head</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">title</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">body</button></div>
+      <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">br</button></div>
+    </div>
+  </div>
+
+  <!-- second question -->
+  <div id="question-two" class="container">
+      <div class="row">
+        <div class="form-group">
+        <h1>2.In JavaScript, what element is used to store and manipulate text usually in multiples?</h1>
+        <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">String</button></div>
+        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Arry</button></div>
+        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Math</button></div>
+        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Text</button></div>
+      </div>
+  </div>
+
+  <!-- third question -->
+  <div id="question-three" class="container">
+    <div class="row">
+      <div class="form-group">
+      <h1>3.What is the name of the object that allows you to perform mathematical tasks with the interpreter?</h1>
+      <div style="padding:5px"><button id="Wrong" type="button" class="btn btn-primary">Number</button></div>
+      <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">Math</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Count</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Solve</button></div>
+    </div>
 </div>
 
-<script>
-  console.log("hello world")
-  $("#good").click(()=> console.log("good click"))
-</script>
+  <!-- fourth question -->
+  <div id="question-four" class="container">
+    <div class="row">
+      <div class="form-group">
+      <h1>4.What property is used to set the horizontal alignment of text or words on a page?</h1>
+      <div style="padding:5px"><button id="Wrong" type="button" class="btn btn-primary">Spacing</button></div>
+      <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">Horizontal-align</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Text-align</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Placement</button></div>
+    </div>
+</div>
+
+  <!-- fifth question -->
+  <div id="question-five" class="container">
+    <div class="row">
+      <div class="form-group">
+      <h1>5.What are the CSS properties that are used to add space around sections of content?</h1>
+      <div style="padding:5px"><button id="Wrong" type="button" class="btn btn-primary">Padding</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Break</button></div>
+      <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">Spacing</button></div>
+      <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Cleaner</button></div>
+    </div>
+</div>
+
+ <!-- finish page -->
+ <div class="jumbotron text-center">
+  <h1>Thanks for your times</h1>
+  <p>Here is your score</p>
+  <form>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Score</label>
+      <div class="col-sm-10">
+        <input type="number" readonly class="form-control-plaintext" id="score" value=" ">
+      </div>
+    </div>
+  </form>
+
+
+  <style>
+    .display {
+      visibility: hidden;
+      display: none;
+    }
+  </style>
+
+  <script>
+    $("#wrong").click(() => {
+      console.log($("#").val())
+    })
+    $("#right").click(() => {
+      $("#question-one").addClass("display")
+    })
+
+    
+  </script>
 </body>
 
 </html>

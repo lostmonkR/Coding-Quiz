@@ -15,11 +15,11 @@
   <div class="jumbotron text-center">
     <h1>Coding Quiz</h1>
     <p>Well come to my Coding Quiz, I have 5 question for you to test your skill, prepare for it.</p>
-    <div style="padding:5px"><button id="good" type="button" class="btn btn-primary">continue</button></div>
+    <div style="padding:5px"><button id="continue" type="button" class="btn btn-primary">Continue</button></div>
   </div>
 
   <!-- first question -->
-  <div id="question-one" class="container">
+  <div id="question-one" class="container is-visible">
     <div class="row">
       <h1>1.What tag is not required in all HTML documents, and is used to define the title?</h1>
       <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">head</button></div>
@@ -30,7 +30,7 @@
   </div>
 
   <!-- second question -->
-  <div id="question-two" class="container">
+  <div id="question-two" class="container is-visible">
       <div class="row">
         <div class="form-group">
         <h1>2.In JavaScript, what element is used to store and manipulate text usually in multiples?</h1>
@@ -42,7 +42,7 @@
   </div>
 
   <!-- third question -->
-  <div id="question-three" class="container">
+  <div id="question-three" class="container is-visible">
     <div class="row">
       <div class="form-group">
       <h1>3.What is the name of the object that allows you to perform mathematical tasks with the interpreter?</h1>
@@ -54,7 +54,7 @@
 </div>
 
   <!-- fourth question -->
-  <div id="question-four" class="container">
+  <div id="question-four" class="container is-visible">
     <div class="row">
       <div class="form-group">
       <h1>4.What property is used to set the horizontal alignment of text or words on a page?</h1>
@@ -66,7 +66,7 @@
 </div>
 
   <!-- fifth question -->
-  <div id="question-five" class="container">
+  <div id="question-five" class="container is-visible">
     <div class="row">
       <div class="form-group">
       <h1>5.What are the CSS properties that are used to add space around sections of content?</h1>
@@ -78,27 +78,31 @@
 </div>
 
  <!-- finish page -->
- <div class="jumbotron text-center">
+ <div class="jumbotron text-center is-visible">
   <h1>Thanks for your times</h1>
   <p>Here is your score</p>
   <form>
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Score</label>
       <div class="col-sm-10">
-        <input type="number" readonly class="form-control-plaintext" id="score" value=" ">
+        <input type="number" class="form-control-plaintext" id="score" value=" ">
       </div>
     </div>
   </form>
 
 
   <style>
-    .display {
+    .is-visible{
       visibility: hidden;
       display: none;
     }
   </style>
 
   <script>
+    $("#continue").click(()=>{
+      console.log("hello world")
+      $("#question-one").removeClass("is-visible")
+    })
     $("#wrong").click(() => {
       console.log($("#").val())
     })

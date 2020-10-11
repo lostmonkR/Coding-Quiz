@@ -9,8 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
-  
-  
+
+
 </head>
 
 <body>
@@ -23,9 +23,9 @@
 
   <!-- first question -->
   <div id="question-one" class="container is-visible">
-    <div class="row">
+    <div id="asdf12" class="row">
       <h1>1.What tag is not required in all HTML documents, and is used to define the title?</h1>
-      <div style="padding:5px"><button type="button" class="btn btn-primary wrong">head</button></div>
+      <div id="asdf1" style="padding:5px"><button type="button" class="btn btn-primary wrong">head</button></div>
       <div style="padding:5px"><button type="button" class="btn btn-primary wrong">title</button></div>
       <div style="padding:5px"><button type="button" class="btn btn-primary wrong">body</button></div>
       <div style="padding:5px"><button type="button" class="btn btn-primary right">br</button></div>
@@ -38,10 +38,10 @@
     <div class="row">
       <div class="form-group">
         <h1>2.In JavaScript, what element is used to store and manipulate text usually in multiples?</h1>
-        <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">String</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Arry</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Math</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Text</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary right">String</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Arry</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Math</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Text</button></div>
       </div>
     </div>
   </div>
@@ -51,10 +51,10 @@
     <div class="row">
       <div class="form-group">
         <h1>3.What is the name of the object that allows you to perform mathematical tasks with the interpreter?</h1>
-        <div style="padding:5px"><button id="Wrong" type="button" class="btn btn-primary">Number</button></div>
-        <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">Math</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Count</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Solve</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Number</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary right">Math</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Count</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Solve</button></div>
       </div>
     </div>
   </div>
@@ -64,11 +64,10 @@
     <div class="row">
       <div class="form-group">
         <h1>4.What property is used to set the horizontal alignment of text or words on a page?</h1>
-        <div style="padding:5px"><button id="Wrong" type="button" class="btn btn-primary">Spacing</button></div>
-        <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">Horizontal-align</button>
-          <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Text-align</button>
-          </div>
-          <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Placement</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Spacing</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary right">Horizontal-align</button>
+          <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Text-align</button></div>
+          <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Placement</button></div>
         </div>
       </div>
     </div>
@@ -79,10 +78,10 @@
     <div class="row">
       <div class="form-group">
         <h1>5.What are the CSS properties that are used to add space around sections of content?</h1>
-        <div style="padding:5px"><button id="Wrong" type="button" class="btn btn-primary">Padding</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Break</button></div>
-        <div style="padding:5px"><button id="right" type="button" class="btn btn-primary">Spacing</button></div>
-        <div style="padding:5px"><button id="wrong" type="button" class="btn btn-primary">Cleaner</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Padding</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Break</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary right">Spacing</button></div>
+        <div style="padding:5px"><button type="button" class="btn btn-primary wrong">Cleaner</button></div>
       </div>
     </div>
   </div>
@@ -97,21 +96,28 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
   <!-- finish page -->
-  <div id="question-five" class="container is-visible">
+  <div id="score-page" class="container is-visible">
     <h1>Thanks for your times</h1>
     <p>Here is your score</p>
     <form>
       <div class="form-group row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">Score</label>
+        <label for="scores-right" class="col-sm-2 col-form-label">Right Answers</label>
         <div class="col-sm-10">
-          <input type="number" class="form-control-plaintext" id="score" value="">
+          <input type="number" class="form-control-plaintext" id="scores-right" value="">
         </div>
       </div>
+      <div class="form-group row">
+        <label for="scores-wrong" class="col-sm-2 col-form-label">Wrong Answers</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control-plaintext" id="scores-wrong" value="">
+        </div>
+      </div>
+    </form>
   </div>
 
   <style>
@@ -121,38 +127,58 @@
     }
   </style>
 
-   <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
   <script>
     var rightAnswers = 0;
     var wrongAnswers = 0;
 
+    computeAnswer = (message, isRight) => {
+      if (isRight) {
+        ++rightAnswers
+        console.log('right answers', rightAnswers)
+      } else {
+        ++wrongAnswers
+        console.log('wrong answers', wrongAnswers)
+      }
+
+      $('#message-box').removeClass("is-visible")
+      $('#message').html(`<strong>${message}</strong>`)
+      setTimeout(() => {
+        $('#message-box').addClass("is-visible")
+        $('#message').html('')
+      }, 3000)
+    }
+
     $("#continue").click(() => {
       $("#question-one").removeClass("is-visible")
-      $(".right").click(() => {
-        ++rightAnswers
-        $("#question-two").removeClass("is-visible")
-        $('#question-one').addClass("is-visible")
-        $('#message-box').removeClass("is-visible")
-        $('#message').html('<strong>Right</strong>')
-        setTimeout(()=> {
-          $('#message-box').addClass("is-visible")
-          $('#message').html('')
-        }, 3000)
-      })
-      $(".wrong").click(() => {
-        ++wrongAnswers
-        $("#question-two").removeClass("is-visible")
-        $('#question-one').addClass("is-visible")
-        $('#message-box').removeClass("is-visible")
-        $('#message').html('<strong>Wrong</strong>')
-        setTimeout(()=> {
-          $('#message-box').addClass("is-visible")
-          $('#message').html('')
-        }, 3000)
-        
-        console.log("wrongAnswer",wrongAnswers)
+    })
 
-      })
+    let currentPage = 0
+    let pages = ['question-one', 'question-two', 'question-three', 'question-four', 'question-five']
+    const nextPage = () => {
+      ++currentPage
+
+      if (currentPage == pages.length) {
+        current = pages[pages.length - 1]
+        $(`#${current}`).addClass("is-visible")
+        $('#score-page').removeClass("is-visible")
+        $('#scores-right').val(rightAnswers)
+        $('#scores-wrong').val(wrongAnswers)
+      } else {
+        current = pages[pages.length - 1]
+        prev = pages[currentPage - 1]
+        $(`#${current}`).removeClass("is-visible")
+        $(`#${prev}`).addClass("is-visible")
+      }
+    }
+
+    $(".right").click(() => {
+      computeAnswer("Right", true)
+      nextPage()
+    })
+    $(".wrong").click(() => {
+      computeAnswer("Wrong", false)
+      nextPage()
     })
 
 

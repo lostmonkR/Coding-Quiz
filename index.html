@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  
+  
 </head>
 
 <body>
@@ -118,10 +121,15 @@
     }
   </style>
 
+   <script src="js/index.js"></script>
   <script>
+    var rightAnswers = 0;
+    var wrongAnswers = 0;
+
     $("#continue").click(() => {
       $("#question-one").removeClass("is-visible")
       $(".right").click(() => {
+        ++rightAnswers
         $("#question-two").removeClass("is-visible")
         $('#question-one').addClass("is-visible")
         $('#message-box').removeClass("is-visible")
@@ -130,9 +138,9 @@
           $('#message-box').addClass("is-visible")
           $('#message').html('')
         }, 3000)
-        
       })
       $(".wrong").click(() => {
+        ++wrongAnswers
         $("#question-two").removeClass("is-visible")
         $('#question-one').addClass("is-visible")
         $('#message-box').removeClass("is-visible")
@@ -141,6 +149,9 @@
           $('#message-box').addClass("is-visible")
           $('#message').html('')
         }, 3000)
+        
+        console.log("wrongAnswer",wrongAnswers)
+
       })
     })
 
